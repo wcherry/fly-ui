@@ -2,37 +2,78 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.breadcrumb {
+  margin: 16px;
+  font-size: 16px;
+  font-weight: 500;
+  text-align: left;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.dialog {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  z-index: 1000;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.dialog-header {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.dialog-body {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.dialog-footer {
+  margin-top: 12px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  gap: 10px;
+}
+
+.dialog-button {
+  padding: 8px 12px;
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.dialog-button-primary {
+  background-color: #007bff;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.dialog-button-secondary {
+  background-color: #f1f1f1;
+  color: #333;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.form-control {
+  margin: 8px 16px;
+  padding: 4px 4px;
+}
+
+.breadcrumb span {
+  display: inline; /* Spans are inline by default */
+  margin-right: 15px; /* Space for the chevron */
+  position: relative;
+}
+
+/* Add a chevron AFTER every span that is followed by another span */
+.breadcrumb span + span::before {
+  content: '>'; /* or a custom character, e.g., '\203A' (single right angle quotation mark) */
+  position: absolute;
+  left: -12px; /* Position the chevron in the space you made with margin */
+  /*color: #ccc; /* Customize the color */
 }
