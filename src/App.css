@@ -2,12 +2,64 @@
   text-align: center;
 }
 
-.breadcrumb {
-  margin: 16px;
-  font-size: 16px;
-  font-weight: 500;
-  text-align: left;
+.menu {
+  background-color: #f9fafb;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 }
+.menu-item {
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.menu-item-disabled {
+  color: #ccc;
+  cursor: not-allowed;
+}
+
+.floating-menu-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  float: left;
+  position: fixed;
+  top: 8px;
+  left: 8px;
+  width: 32px;
+  height: 32px;
+  background-color: #FF0D0E;
+  border-radius: 50%;
+}
+
+.floating-menu {
+  display: flex;
+  float: left;
+  flex-direction: column;
+  align-items: flex-start;
+  position: fixed;
+  top: 30px;
+  left: 30px;
+  width: 140px;
+  padding: 2px 2px 2px 2px;
+  background-color: #f9fafb;  
+  border: 1px solid #333;
+  color: #333;
+  z-index: 990;
+}
+
+.floating-menu-item {
+  cursor: pointer;
+  width: 128px;
+  padding: 0px 8px 0px 4px;
+  text-align: left; 
+}
+
+.floating-menu-item:hover {
+  background-color: lightgray;
+}
+
 
 .dialog {
   position: fixed;
@@ -32,6 +84,8 @@
 .dialog-body {
   font-size: 14px;
   margin-bottom: 20px;
+  border:#333 1px solid;
+  padding:10px;
 }
 
 .dialog-footer {
@@ -62,6 +116,24 @@
 .form-control {
   margin: 8px 16px;
   padding: 4px 4px;
+}
+
+.drop-target {
+  border: 2px dashed #007bff;
+  background-color: #f0f8ff;
+  height: 150px;
+  margin: 12px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.breadcrumb {
+  margin: 16px;
+  font-size: 16px;
+  font-weight: 500;
+  text-align: left;
 }
 
 .breadcrumb span {

@@ -25,3 +25,18 @@ export async function login(username: string, password: string): Promise<LoginRe
     }
 }
 
+
+export async function registerUser(username: string, password: string, emailAddress: string): Promise<LoginResponse> {
+    try {
+        const response = await axios.post<LoginResponse>('/api/auth/register', {
+            username,
+            password,
+            email: emailAddress
+        });
+        console.log('Registration response:', response.data);
+        return response.data;
+    } catch (error) {
+        console.error('Registration failed:', error);
+        throw error;
+    }
+}
